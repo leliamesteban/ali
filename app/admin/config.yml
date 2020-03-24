@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: post
+    label: Post
+    folder: views/posts
+    create: true
+    title: title
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "index.pug"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
