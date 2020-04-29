@@ -4,7 +4,7 @@ html {
 body {
     border: 2px solid #ffffff;
     background: rgb(159,242,255);
-    background: linear-gradient(90deg, rgba(159,242,255,1) 0%, rgba(157,232,255,1) 35%, rgba(250,254,255,1) 100%););
+    background: linear-gradient(132deg, rgba(159,242,255,1) 0%, rgba(187,231,244,1) 35%, rgba(250,254,255,1) 100%);
 }
 
 .box {
