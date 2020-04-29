@@ -1,9 +1,9 @@
 html {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(116, 232, 240, 0));
 }
 
 body {
-border: 2px solid #ffffff;
+    border: 2px solid #ffffff;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(116, 232, 240, 0));
 }
 
 .box {
