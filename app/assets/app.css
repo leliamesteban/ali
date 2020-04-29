@@ -2,7 +2,6 @@ html {
 }
 
 body {
-    border: 2px solid #ffffff;
     background: rgb(86,199,248);
     background: linear-gradient(52deg, rgba(86,199,248,1) 0%, rgba(163,218,246,1) 20%, rgba(250,254,255,1) 98%);
 }
