@@ -1,5 +1,4 @@
 ---
-layout: index.pug
 title: Raman spectra of commonly usec plastic polymers
 image: /images/uploads/download.png
 ---
