@@ -4,3 +4,26 @@ block content
     p PICTURE
     P Paramenters used for spectra collection
   h2 Peaks characterization
+  script(src="d3.min.js?v=3.2.8")
+  script(type="text/javascript"charset="utf-8")
+    d3.text("PVC.csv", function(data) {
+        var parsedCSV = d3.csv.parseRows(data);
+
+        var container = d3.select("body")
+            .append("table")
+
+            .selectAll("tr")
+                .data(parsedCSV).enter()
+                .append("tr")
+
+            .selectAll("td")
+                .data(function(d) { return d; }).enter()
+                .append("td")
+                .text(function(d) { return d; });
+    });
+  table
+    tr
+      th Raman shift [1/cm] (1,1)
+      th (1,2)
+    tr
+      td
