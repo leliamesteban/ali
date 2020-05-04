@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><title></title><meta charset="null"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/assets/app.css"></head><body><header></header><div id="neutralino-app"><li><a class="right" href="https://ali-dissertation.netlify.com/index">HOMEPAGE</a></li><h1>PE Raman spectra<div class="box"><p>The monomer unit of PE is characterized by a Carbon-Carbon backbone structure and by the presence of methylene functional groups.</p><p>Its monomer unit is:</p><img src="/static/images/monomerpe.png"><p>The following spectra was obtained using a Thermofisher Raman microscope with a 50x objective and 532 nm laser.</p><p>The parametres used were 20 exposures, 1 sec exposures, no photobleaching, fluorescence correction. The spectra was processed using the SpectraGryph 1.2 spectroscopy software</p><P>SPECTRA</P><p>Peaks characterization</p></div></h1><script src="d3.min.js?v=3.2.8"></script><script type="text/javascript" charset="utf-8">d3.text("/static/data/PVC.csv", function(data) {
+    var parsedCSV = d3.csv.parseRows(data);
+
+    var container = d3.select("body")
+        .append("table")
+
+        .selectAll("tr")
+            .data(parsedCSV).enter()
+            .append("tr")
+
+        .selectAll("td")
+            .data(function(d) { return d; }).enter()
+            .append("td")
+            .text(function(d) { return d; });
+});</script></div><script src="/neutralino.js"></script><script src="/assets/app.js"></script><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script><script>if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+    if (!user) {
+        window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+        });
+    }
+    });
+}</script><footer></footer></body></html>
