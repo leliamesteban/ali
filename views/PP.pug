@@ -8,23 +8,66 @@ block content
       p Its monomer unit is:
       img(src="/static/images/monomerpp.png")
       p The following spectra was obtained using a Thermofisher Raman microscope with a 50x objective and 532 nm laser.
-      p The parametres used were 30 exposures, 1 sec exposures, no photobleaching, fluorescence correction. The spectra was processed using the SpectraGryph 1.2 spectroscopy software
-      P SPECTRA
-      p Peaks characterization
-  script(src="d3.min.js?v=3.2.8")
-  script(type="text/javascript", charset="utf-8").
-    d3.text("/static/data/PVC.csv", function(data) {
-        var parsedCSV = d3.csv.parseRows(data);
-
-        var container = d3.select("body")
-            .append("table")
-
-            .selectAll("tr")
-                .data(parsedCSV).enter()
-                .append("tr")
-
-            .selectAll("td")
-                .data(function(d) { return d; }).enter()
-                .append("td")
-                .text(function(d) { return d; });
-    });
+      p The parameters used were 30 exposures, 1 sec exposures, no photobleaching, fluorescence correction. The spectra was processed using the SpectraGryph 1.2 spectroscopy software.
+      img(src="/static/images/spectrapp.png")
+      p 
+        strong Peaks characterization
+      table
+        tbody
+          tr
+            td(width='151')
+              p
+                strong Raman shift [1/cm]
+            td(width='435')
+              p
+                strong Characterization
+          tr
+            td(width='151')
+              p 390
+            td(width='435')
+              p C-C skeletal vibrations
+          tr
+            td(width='151')
+              p 800-1160
+            td(width='435')
+              p C-C-C skeletal symmetric and asymmetric stretching vibrations
+          tr
+            td(width='151')
+              p 1215
+            td(width='435')
+              p Methylene twisting bending
+          tr
+            td(width='151')
+              p 1325
+            td(width='435')
+              p Methylene wagging bending
+          tr
+            td(width='151')
+              p 1355
+            td(width='435')
+              p Methyl symmetric bending
+          tr
+            td(width='151')
+              p 1430
+            td(width='435')
+              p Methylene scissoring bending
+          tr
+            td(width='151')
+              p 1455
+            td(width='435')
+              p Methyl asymmetric bending
+          tr
+            td(width='151')
+              p 2840
+            td(width='435')
+              p Methyne C-H stretch
+          tr
+            td(width='151')
+              p 2880
+            td(width='435')
+              p Methylene C-H symmetric and asymmetric stretch stretches
+          tr
+            td(width='151')
+              p 2950
+            td(width='435')
+              p Methyl symmetric and asymmetric C-H stretches
