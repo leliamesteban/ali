@@ -8,23 +8,52 @@ block content
       p Its monomer unit is:
       img(src="/static/images/monomerpvc.png")
       p The following spectra was obtained using a Thermofisher Raman microscope with a 50x objective and 532 nm laser.
-      p The parametres used were 20 exposures, 2 sec exposures, no photobleaching, fluorescence correction. The spectra was processed using the SpectraGryph 1.2 spectroscopy software.
-      P SPECTRA
-      p Peaks characterization
-  script(src="d3.min.js?v=3.2.8")
-  script(type="text/javascript", charset="utf-8").
-    d3.text("/static/data/PVC.csv", function(data) {
-        var parsedCSV = d3.csv.parseRows(data);
-
-        var container = d3.select("body")
-            .append("table")
-
-            .selectAll("tr")
-                .data(parsedCSV).enter()
-                .append("tr")
-
-            .selectAll("td")
-                .data(function(d) { return d; }).enter()
-                .append("td")
-                .text(function(d) { return d; });
-    });
+      p The parameters used were 20 exposures, 2 sec exposures, no photobleaching, fluorescence correction. The spectra was processed using the SpectraGryph 1.2 spectroscopy software.
+      Pimg(src="/static/images/spectrapvc.png")
+      p 
+        strong Peaks characterization
+      table
+        tbody
+          tr
+            td(style='text-align: center;' width='161')
+              p
+                strong Raman shift [1/cm]
+            td(style='text-align: center;' width='425')
+              p
+                strong Characterization
+          tr
+            td(style='text-align: center;' width='161')
+              p 355
+            td(style='text-align: center;' width='425')
+              p C-C skeletal vibrations
+          tr
+            td(style='text-align: center;' width='161')
+              p 650
+            td(style='text-align: center;' width='425')
+              p C-Cl stretching vibration
+          tr
+            td(style='text-align: center;' width='161')
+              p 1050-1170
+            td(style='text-align: center;' width='425')
+              p C-C-C skeletal symmetric and asymmetric stretching vibrations
+          tr
+            td(style='text-align: center;' width='161')
+              p 1325
+            td(style='text-align: center;' width='425')
+              p Methylene wagging bending
+          tr
+            td(style='text-align: center;' width='161')
+              p 1425
+            td(style='text-align: center;' width='425')
+              p Methylene scissoring bending
+          tr
+            td(style='text-align: center;' width='161')
+                 p 2910
+            td(style='text-align: center;' width='425')
+              p Methylene C-H symmetric and asymmetric stretching
+          tr
+            td(style='text-align: center;' width='161')
+              p 2970
+            td(style='text-align: center;' width='425')
+              p Methyne C-H stretch
+  
