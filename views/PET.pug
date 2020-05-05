@@ -4,27 +4,75 @@ block content
     a.right(href="https://ali-dissertation.netlify.com/index") HOMEPAGE
   h1 PET Raman spectra
     .box
-      p The monomer unit of PET is characterized by a Carbon-heteroatom backbone structure and by the presence of esters, phenyl and methylene.
+      p The monomer unit of PET is characterized by a Carbon-Heteroatom backbone structure and by the presence of esters, phenyl and methylene.
       p Its monomer unit is:
       img(src="/static/images/monomerpet.png")
       p The following spectra was obtained using a Thermofisher Raman microscope with a 50x objective and 532 nm laser.
-      p The parametres used were 20 exposures, 1 sec exposures, no photobleaching, fluorescence correction. The spectra was processed using the SpectraGryph 1.2 spectroscopy software
-      P SPECTRA
-      p Peaks characterization
-  script(src="d3.min.js?v=3.2.8")
-  script(type="text/javascript", charset="utf-8").
-    d3.text("/static/data/PVC.csv", function(data) {
-        var parsedCSV = d3.csv.parseRows(data);
-
-        var container = d3.select("body")
-            .append("table")
-
-            .selectAll("tr")
-                .data(parsedCSV).enter()
-                .append("tr")
-
-            .selectAll("td")
-                .data(function(d) { return d; }).enter()
-                .append("td")
-                .text(function(d) { return d; });
-    });
+      p The parameters used were 20 exposures, 1 sec exposures, no photobleaching, fluorescence correction. The spectra was processed using the SpectraGryph 1.2 spectroscopy software.
+      img(src="/static/images/spectrapet.png")
+      p 
+        strong Peaks characterization
+      table(border="1")
+        tbody
+          tr
+            td(width='151')
+              p
+                strong Raman shift [1/cm]
+            td(width='435')
+              p
+                strong Characterization
+          tr
+            td(width='151')
+              p 625
+            td(width='435')
+              p C-H bending in para-disubstituted benzene
+          tr
+            td(width='151')
+              p 700
+            td(width='435')
+              p Out of plane benzene C-H bending
+          tr
+            td(width='151')
+              p 790
+            td(width='435')
+              p O-C=O in plane deformations
+          tr
+            td(width='151')
+              p 1100
+            td(width='435')
+              p C-O stretching
+          tr
+            td(width='151')
+              p 1170
+            td(width='435')
+              p C-C skeletal vibrations
+          tr
+            td(width='151')
+              p 1280
+            td(width='435')
+              p C-O stretching
+          tr
+            td(width='151')
+              p 1450
+            td(width='435')
+              p Methylene C-H scissoring vibration
+          tr
+            td(width='151')
+              p 1600
+            td(width='435')
+              p C=C-H stretching
+          tr
+            td(width='151')
+              p 1715
+            td(width='435')
+              p C=O stretching
+          tr
+            td(width='151')
+              p 2925
+            td(width='435')
+              p Methylene C-H stretching
+          tr
+            td(width='151')
+              p 3080
+            td(width='435')
+              p Aromatic C-H stretching
